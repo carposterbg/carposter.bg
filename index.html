@@ -21,6 +21,14 @@
             height: 100vh;
             text-align: center;
             backdrop-filter: blur(10px);
+            overflow: hidden; /* Prevents scrolling on all devices */
+        }
+
+        /* Prevents scrolling on iOS */
+        body, html {
+            touch-action: none;
+            overscroll-behavior: none;
+            -webkit-overflow-scrolling: touch;
         }
 
         /* Gradient Overlay */
@@ -54,13 +62,6 @@
             margin-bottom: 10px;
         }
 
-        /* Hero Text */
-        .hero-text {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-            color: #ddd;
-        }
-
         .social-media {
             margin-bottom: 30px;
             text-align: center; /* Center the social media icons */
@@ -90,9 +91,7 @@
         }
 
         .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: block;
             background: linear-gradient(135deg, #4b6cb7, #182848);
             color: white;
             text-decoration: none;
@@ -108,12 +107,6 @@
             background: linear-gradient(135deg, #34e89e, #0f3443);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
             transform: scale(1.05);
-        }
-
-        .btn img {
-            margin-right: 10px;
-            width: 20px;
-            height: 20px;
         }
 
         /* Footer Text with Animated Gradient and Pulsate Effect */
@@ -160,18 +153,13 @@
         <div class="logo">
             <img src="your-logo.png" alt="Car Posters Logo">
         </div>
-
-        <!-- Hero Text -->
-        <div class="hero-text">
-            Автомобилни постери
-        </div>
         
         <!-- Social Media Icons Section -->
         <div class="social-media">
-            <a href="https://www.instagram.com/carposter.bg" target="_blank">
+            <a href="https://www.instagram.com/your-instagram" target="_blank">
                 <img src="instagram-icon.png" alt="Instagram">
             </a>
-            <a href="https://www.tiktok.com/@carposter.bg" target="_blank">
+            <a href="https://www.tiktok.com/@your-tiktok" target="_blank">
                 <img src="tiktok-icon.png" alt="TikTok">
             </a>
             <a href="https://www.facebook.com/your-facebook" target="_blank">
@@ -181,15 +169,9 @@
 
         <!-- Buttons Section -->
         <div class="buttons">
-            <a href="#" class="btn">
-                <img src="price-icon.png" alt="Price Icon"> Цени
-            </a>
-            <a href="#" class="btn">
-                <img src="order-icon.png" alt="Order Icon"> Как да поръчам
-            </a>
-            <a href="#" class="btn">
-                <img src="faq-icon.png" alt="FAQ Icon"> Често задавани въпроси
-            </a>
+            <a href="#" class="btn">Цени</a>
+            <a href="#" class="btn">Как да поръчам</a>
+            <a href="#" class="btn">Често задавани въпроси</a>
         </div>
 
         <!-- Footer Text Inside the Container with Animated Gradient and Pulsate -->
