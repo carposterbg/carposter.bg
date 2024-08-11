@@ -49,8 +49,8 @@
         }
 
         .logo img {
-            max-width: 100%;
-            height: auto;
+            width: 150px; /* Set the width of the logo */
+            height: auto; /* Automatically adjust the height to maintain aspect ratio */
             margin-bottom: 10px;
         }
 
@@ -67,16 +67,15 @@
 
         .social-media a {
             margin: 0 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .social-media a:hover {
-            transform: scale(1.1);
+            text-decoration: none; /* Remove any default underline */
+            border: none; /* Remove any border */
+            padding: 0;
         }
 
         .social-media img {
             width: 40px;
             height: 40px;
+            display: block; /* Ensures no extra spacing around the image */
             transition: opacity 0.3s ease;
         }
 
@@ -170,11 +169,11 @@
             <a href="https://www.instagram.com/your-instagram" target="_blank">
                 <img src="instagram-icon.png" alt="Instagram">
             </a>
-            <a href="https://www.facebook.com/your-facebook" target="_blank">
-                <img src="facebook-icon.png" alt="Facebook">
-            </a>
             <a href="https://www.tiktok.com/@your-tiktok" target="_blank">
                 <img src="tiktok-icon.png" alt="TikTok">
+            </a>
+            <a href="https://www.facebook.com/your-facebook" target="_blank">
+                <img src="facebook-icon.png" alt="Facebook">
             </a>
         </div>
 
