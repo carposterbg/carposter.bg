@@ -17,6 +17,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100vh;
             text-align: center;
             backdrop-filter: blur(10px);
             overflow: hidden; /* Prevents scrolling on all devices */
@@ -27,12 +28,24 @@
             touch-action: none;
             overscroll-behavior: none;
             -webkit-overflow-scrolling: touch;
+            height: 100%;
         }
 
-        /* Full Height Adjustment */
+        /* Gradient Overlay */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(34, 34, 34, 0.7));
+            z-index: -1;
+        }
+
         .container {
-            width: 100%;
             max-width: 400px;
+            width: 100%; /* Ensure the container doesn't exceed max-width */
             margin: auto;
             background: rgba(34, 34, 34, 0.7);
             padding: 20px;
@@ -80,7 +93,7 @@
 
         .btn {
             display: block;
-            width: 260px; /* Set a fixed width to 220px */
+            width: 240px; /* Set a fixed width to 220px */
             background: linear-gradient(135deg, #4b6cb7, #182848);
             color: white;
             text-decoration: none;
@@ -170,7 +183,7 @@
     </div>
 
     <script>
-        // Adjust the container height to ensure centering
+        // Adjust the body height to ensure centering
         function adjustHeight() {
             document.body.style.height = `${window.innerHeight}px`;
         }
