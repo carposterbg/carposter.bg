@@ -15,10 +15,8 @@
             color: white;
             font-family: 'Montserrat', sans-serif;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
             text-align: center;
             backdrop-filter: blur(10px);
             overflow: hidden; /* Prevents scrolling on all devices */
@@ -31,19 +29,9 @@
             -webkit-overflow-scrolling: touch;
         }
 
-        /* Gradient Overlay */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(34, 34, 34, 0.7));
-            z-index: -1;
-        }
-
+        /* Full Height Adjustment */
         .container {
+            width: 100%;
             max-width: 400px;
             margin: auto;
             background: rgba(34, 34, 34, 0.7);
@@ -92,7 +80,7 @@
 
         .btn {
             display: block;
-            width: 220px; /* Set a fixed width similar to when icons were present */
+            width: 260px; /* Set a fixed width to 220px */
             background: linear-gradient(135deg, #4b6cb7, #182848);
             color: white;
             text-decoration: none;
@@ -180,5 +168,16 @@
             Безплатна доставка
         </div>
     </div>
+
+    <script>
+        // Adjust the container height to ensure centering
+        function adjustHeight() {
+            document.body.style.height = `${window.innerHeight}px`;
+        }
+
+        // Adjust on load and on window resize
+        window.addEventListener('resize', adjustHeight);
+        window.addEventListener('load', adjustHeight);
+    </script>
 </body>
 </html>
