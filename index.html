@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Posters - Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1c1c1c;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Gradient Overlay */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(34, 34, 34, 0.7));
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: rgba(34, 34, 34, 0.7);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(34, 34, 34, 0.8);
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        /* Hero Text */
+        .hero-text {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #ddd;
+        }
+
+        .social-media {
+            margin-bottom: 30px;
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-media a:hover {
+            transform: scale(1.1);
+        }
+
+        .social-media img {
+            width: 40px;
+            height: 40px;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-media img:hover {
+            opacity: 0.7;
+        }
+
+        .buttons {
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #4b6cb7, #182848);
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #34e89e, #0f3443);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+            transform: scale(1.05);
+        }
+
+        .btn img {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Footer Text with Animated Gradient and Pulsate Effect */
+        .footer {
+            font-size: 1.1em;
+            background: linear-gradient(135deg, #4b6cb7, #34e89e);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: wave 2s infinite, pulsate 1.5s infinite;
+            cursor: default;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes wave {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes pulsate {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="your-logo.png" alt="Car Posters Logo">
+        </div>
+
+        <!-- Hero Text -->
+        <div class="hero-text">
+            Автомобилни постери
+        </div>
+        
+        <!-- Social Media Icons Section -->
+        <div class="social-media">
+            <a href="https://www.instagram.com/your-instagram" target="_blank">
+                <img src="instagram-icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/your-facebook" target="_blank">
+                <img src="facebook-icon.png" alt="Facebook">
+            </a>
+            <a href="https://www.tiktok.com/@your-tiktok" target="_blank">
+                <img src="tiktok-icon.png" alt="TikTok">
+            </a>
+        </div>
+
+        <!-- Buttons Section -->
+        <div class="buttons">
+            <a href="#" class="btn">
+                <img src="price-icon.png" alt="Price Icon"> Цени
+            </a>
+            <a href="#" class="btn">
+                <img src="order-icon.png" alt="Order Icon"> Как да поръчам
+            </a>
+            <a href="#" class="btn">
+                <img src="faq-icon.png" alt="FAQ Icon"> Често задавани въпроси
+            </a>
+        </div>
+
+        <!-- Footer Text Inside the Container with Animated Gradient and Pulsate -->
+        <div class="footer">
+            Безплатна доставка
+        </div>
+    </div>
+</body>
+</html>
