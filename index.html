@@ -165,7 +165,9 @@
         }
 
         /* Modal visible when target */
-        #prices:target {
+        #prices:target,
+        #order:target,
+        #faq:target {
             display: flex;
             animation: popUp 0.6s ease forwards;
         }
@@ -184,7 +186,7 @@
         .modal-content {
             position: relative;
             text-align: center;
-            max-width: 90%; /* Restore the max-width for all screens */
+            max-width: 90%; /* Max-width for all screens */
             max-height: 90%;
             overflow: auto; /* Enable scrolling within the modal */
             border-radius: 20px; /* Rounded corners */
@@ -238,8 +240,8 @@
         <!-- Buttons Section -->
         <div class="buttons">
             <a href="#prices" class="btn">Цени</a>
-            <a href="#" class="btn">Как да поръчам</a>
-            <a href="#" class="btn">Често задавани въпроси</a>
+            <a href="#order" class="btn">Как да поръчам</a>
+            <a href="#faq" class="btn">Често задавани въпроси</a>
         </div>
 
         <!-- Footer Text Inside the Container with Animated Gradient and Pulsate -->
@@ -248,11 +250,27 @@
         </div>
     </div>
 
-    <!-- The Modal -->
+    <!-- Modal for Prices -->
     <div id="prices" class="modal">
         <div class="modal-content">
             <a href="#" class="close">&times;</a>
             <img src="prices.png" alt="Prices Image">
+        </div>
+    </div>
+
+    <!-- Modal for How to Order -->
+    <div id="order" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            <img src="order.png" alt="Order Image">
+        </div>
+    </div>
+
+    <!-- Modal for FAQs -->
+    <div id="faq" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">&times;</a>
+            <img src="faq.png" alt="FAQ Image">
         </div>
     </div>
 
